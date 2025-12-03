@@ -1,12 +1,8 @@
-Real Time Multi-Camera Face Recognition System
+Multi-Camera Face Recognition System
 
-Overview
-    This project is a real-time multi-camera face recognition system that uses FaceNet embeddings,
-    PCA dimensionality reduction, DeepSORT tracking, and DBSCAN clustering. It can detect, track,
-    recognize, and automatically register new faces across multiple camera feeds. Attendance is
-    recorded with date, time, and camera location.
-    
+A real-time face recognition and attendance system using FaceNet, DeepSORT, PCA, and DBSCAN, capable of detecting, tracking, recognizing, and auto-registering faces across multiple camera feeds.
 Features
+
     • Real-time face detection and recognition using FaceNet
     • PCA-reduced embeddings for faster similarity matching
     • Cosine similarity with adaptive threshold for accurate recognition
