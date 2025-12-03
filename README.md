@@ -22,6 +22,7 @@ Project Structure
     • README.md
     
 How the System Works
+
     1. Embedding Generation
     • Face images are processed to extract FaceNet embeddings.
     • Embeddings are normalized and reduced using PCA.
