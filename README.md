@@ -37,13 +37,14 @@ How the System Works
     • Attendance is recorded in Master_Attendance.csv automatically.
     
 Installation Steps
+
 1. Clone the repository:
 git clone https://github.com/ahamedshadi07/Multi-Camera-Face-Recognition-.git
 
-3. Open the project folder:
+2. Open the project folder:
 cd Multi-Camera-Face-Recognition-
 
-5. Install the required packages:
+3. Install the required packages:
 pip install -r requirements.txt
 Usage Instructions
 To Generate Embeddings:
@@ -52,6 +53,7 @@ To Start Multi-Camera Recognition:
 python recognition.py
 
 Additional Notes
+
     • Compatible with both USB and IP cameras.
     • You can change the number of cameras in the script:
     for i in range(2):
