@@ -39,7 +39,7 @@ How the System Works
 Installation Steps
 
 1. Clone the repository:
-git clone https://github.com/ahamedshadi07/Multi-Camera-Face-Recognition-.git
+git clone https://github.com/ahamedshadi07/Multi-Cam-Face-Recognition-.git
 
 2. Open the project folder:
 cd Multi-Camera-Face-Recognition-
