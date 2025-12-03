@@ -1,30 +1,64 @@
-# Multi-Cam-Face-Recognition-
-Real-time multi-camera face recognition system with detection, embeddings, and attendance generation.
+Real Time Multi-Camera Face Recognition System
 
 Overview
-
-A real-time face recognition system that works across multiple camera feeds.
-
-Uses FaceNet embeddings, PCA, DeepSORT tracking, and DBSCAN clustering.
-
-Automatically detects, tracks, recognizes, and registers new faces.
-
-Attendance is logged with camera location and timestamps.
-
+    This project is a real-time multi-camera face recognition system that uses FaceNet embeddings,
+    PCA dimensionality reduction, DeepSORT tracking, and DBSCAN clustering. It can detect, track,
+    recognize, and automatically register new faces across multiple camera feeds. Attendance is
+    recorded with date, time, and camera location.
+    
 Features
+    • Real-time face detection and recognition using FaceNet
+    • PCA-reduced embeddings for faster similarity matching
+    • Cosine similarity with adaptive threshold for accurate recognition
+    • Supports multiple camera streams using threading
+    • DeepSORT-based object tracking for stable Track IDs
+    • Automatic clustering of unknown faces using DBSCAN
+    • Auto-registration of new persons based on unknown clusters
+    • Attendance logging with date, time, and camera location
+    
+Project Structure
+    Multi-Camera-Face-Recognition/
+    • generate_embeddings.py
+    • recognition.py
+    • pca_model.pkl
+    • stored_embeddings.pkl
+    • README.md
+    
+How the System Works
+    1. Embedding Generation
+    • Face images are processed to extract FaceNet embeddings.
+    • Embeddings are normalized and reduced using PCA.
+    • All embeddings and corresponding names are saved in .pkl files.
+    2. Real-Time Multi-Camera Recognition
+    • Each camera is started in a separate thread.
+    • Faces are detected and embeddings are generated in real time.
+    • DeepSORT tracks each face and assigns consistent Track IDs.
+    • Faces are matched using cosine similarity.
+    • Unknown faces are stored and grouped using DBSCAN.
+    • Each new unknown cluster is automatically assigned a name such as Person_1, Person_2, etc.
+    • Attendance is recorded in Master_Attendance.csv automatically.
+    
+Installation Steps
+1. Clone the repository:
+git clone https://github.com/ahamedshadi07/Multi-Camera-Face-Recognition-.git
 
-Face detection and recognition using FaceNet
+3. Open the project folder:
+cd Multi-Camera-Face-Recognition-
 
-PCA for fast and efficient embedding comparison
+5. Install the required packages:
+pip install -r requirements.txt
+Usage Instructions
+To Generate Embeddings:
+python generate_embeddings.py
+To Start Multi-Camera Recognition:
+python recognition.py
 
-Similarity check using cosine similarity
-
-Multi-camera real-time processing using threading
-
-DeepSORT tracking for stable and consistent Track IDs
-
-Automatic unknown-face grouping using DBSCAN clustering
-
-Auto-registration of new persons when unknown clusters repeat
-
-Attendance logging with date, time, and camera source
+Additional Notes
+    • Compatible with both USB and IP cameras.
+    • You can change the number of cameras in the script:
+    for i in range(2):
+    • Attendance CSV is created automatically if it does not exist.
+    License
+MIT License
+Author
+Ahamed Shadi
