@@ -13,6 +13,7 @@ Features
     • Attendance logging with date, time, and camera location
     
 Project Structure
+
     Multi-Camera-Face-Recognition/
     • generate_embeddings.py
     • recognition.py
